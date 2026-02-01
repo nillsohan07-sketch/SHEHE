@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forever 💍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #000;
+      animation: neonBg 2s infinite alternate;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    @keyframes neonBg {
+      0% { background: #000; }
+      25% { background: #ff0066; }
+      50% { background: #00ffe1; }
+      75% { background: #7f00ff; }
+      100% { background: #00ff7f; }
+    }
+
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: textGlow 1.5s infinite alternate;
+    }
+
+    @keyframes textGlow {
+      from { text-shadow: 0 0 10px #fff; }
+      to { text-shadow: 0 0 30px #ff00ff; }
+    }
+
+    img {
+      width: 90%;
+      max-width: 380px;
+      border-radius: 20px;
+      box-shadow: 0 0 50px #fff;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px #fff; }
+      to { box-shadow: 0 0 70px #ff00ff; }
+    }
+
+    .tap {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #fff;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Forever Starts Now </h1>
+
+  <img src="shehe.jpeg" alt="Couple Photo">
+
+  <div class="tap">(Tap anywhere for music)</div>
+
+  <!-- Romantic Music -->
+  <audio id="bgm" loop>
+    <source src="music.m4a" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgm");
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  </script>
+
+</body>
+</html>
+
